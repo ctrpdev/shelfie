@@ -1,18 +1,21 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { Link } from 'expo-router'
+import { StyleSheet } from "react-native";
+import { Link } from "expo-router";
+import ThemeView from "../components/ThemeView";
+import ThemeText from "../components/ThemeText";
 
 const Contact = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Contact Page</Text>
+    <ThemeView style={styles.container}>
+      <ThemeText style={styles.title}>Contact Page</ThemeText>
 
-      <Link href={'/'} style={styles.link}>Back home</Link>
-    </View>
-  )
-}
+      <Link href={"/"} style={styles.link}>
+        <ThemeText>Back home</ThemeText>
+      </Link>
+    </ThemeView>
+  );
+};
 
-export default Contact
+export default Contact;
 
 const styles = StyleSheet.create({
   container: {
@@ -24,8 +27,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 18,
   },
-  link:{
+  link: {
     marginVertical: 10,
-    borderBottomWidth: 1
-  }
+    borderBottomWidth: 1,
+  },
 });
