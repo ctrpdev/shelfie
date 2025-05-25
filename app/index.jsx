@@ -1,28 +1,36 @@
 import { StyleSheet } from "react-native";
 import { Link } from "expo-router";
+
 import ThemeView from "../components/ThemeView";
+import ThemeText from "../components/ThemeText";
 import ThemeLogo from "../components/ThemeLogo";
 import Spacer from "../components/Spacer";
-import ThemeText from "../components/ThemeText";
+import { Colors } from "../constants/Colors";
 
 const Home = () => {
   return (
     <ThemeView style={styles.container}>
       <ThemeLogo />
-      <Spacer height={20} />
+      <Spacer />
+
       <ThemeText style={styles.title} title={true}>
         The Number 1
       </ThemeText>
 
-      <Spacer height={10} />
-      <ThemeText>Reading List App</ThemeText>
-      <Spacer />
+      <ThemeText style={{ marginTop: 10, marginBottom: 30 }}>
+        Reading List App
+      </ThemeText>
 
-      <Link href={"/login"} style={styles.link}>
-        <ThemeText>Login page</ThemeText>
+      <Link href="/login" style={styles.link}>
+        <ThemeText>Login</ThemeText>
       </Link>
-      <Link href={"/register"} style={styles.link}>
-        <ThemeText>Register page</ThemeText>
+
+      <Link href="/register" style={styles.link}>
+        <ThemeText>Register</ThemeText>
+      </Link>
+
+      <Link href="/profile" style={styles.link}>
+        <ThemeText>Profile</ThemeText>
       </Link>
     </ThemeView>
   );
@@ -35,6 +43,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+  },
+  img: {
+    marginVertical: 20,
   },
   title: {
     fontWeight: "bold",
