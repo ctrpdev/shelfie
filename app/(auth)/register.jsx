@@ -12,7 +12,7 @@ const Register = () => {
     console.log("hola");
   };
   return (
-    <ThemeView style={styles.container}>
+    <ThemeView style={styles.container} safe={true}>
       <Spacer />
       <ThemeText title={true} style={styles.title}>
         Register for an account

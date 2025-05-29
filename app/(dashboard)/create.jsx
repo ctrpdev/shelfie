@@ -6,7 +6,7 @@ import ThemeText from "../../components/ThemeText";
 
 const Create = () => {
   return (
-    <ThemeView style={styles.container}>
+    <ThemeView style={styles.container} safe={true}>
       <ThemeText title={true} style={styles.heading}>
         Add a New Book
       </ThemeText>

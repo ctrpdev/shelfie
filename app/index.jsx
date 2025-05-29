@@ -9,7 +9,7 @@ import { Colors } from "../constants/Colors";
 
 const Home = () => {
   return (
-    <ThemeView style={styles.container}>
+    <ThemeView style={styles.container} safe={true}>
       <ThemeLogo />
       <Spacer />
 
